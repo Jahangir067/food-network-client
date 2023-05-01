@@ -28,7 +28,7 @@ const Navbar = () => {
 
             </div>
 
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
         </div>
     );
 };
