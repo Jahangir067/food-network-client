@@ -12,6 +12,8 @@ module.exports = {
   rules: {
     'no-unsused-vars': 0,
     'no-undef': 0,
+    "react/prop-types": 0,
+    "extends": "eslint:recommended",
     'react-refresh/only-export-components': 'warn',
   },
 }
