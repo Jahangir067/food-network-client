@@ -7,6 +7,7 @@ import ViewRecipes from "../components/ViewRecipes/ViewRecipes";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import PrivetRoutes from "./PrivetRoutes/PrivetRoutes";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'details/:id',
-                element: <ViewRecipes></ViewRecipes>,
+                element: <PrivetRoutes><ViewRecipes></ViewRecipes></PrivetRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/recipies/${params.id}`)
             },
             {
