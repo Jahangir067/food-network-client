@@ -2,6 +2,8 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const ViewRecipes = () => {
+    const details = useLoaderData();
+    const {} = details;
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Place from '../Place/Place';
 
 const Chief = ({ chef }) => {
-    const { name, likes, img, recipes_numbers, experience_time } = chef;
+    const { name, likes, img, recipes_numbers, experience_time, id } = chef;
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 border-2">
@@ -19,7 +19,7 @@ const Chief = ({ chef }) => {
                         <FaEye className='text-2xl text-lime-500	'></FaEye>
                         <p className='ml-3 font-bold text-green-600	'>{likes}</p>
                         <div className="justify-end">
-                            <Link to="/details">
+                            <Link to={`/details/${id}`}>
                                 <button className="bg-green-700	 py-2 px-4 font-bold text-white rounded-lg">View Recipes</button>
                             </Link>
                         </div>

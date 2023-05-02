@@ -23,7 +23,7 @@ const Navbar = () => {
                         <img src={logo} />
                     </div>
 
-                    <button className="btn btn-active btn-primary">Login</button>
+                    <Link to="/login"><button className="btn btn-active btn-primary">Login</button></Link>
                 </div>
 
             </div>
