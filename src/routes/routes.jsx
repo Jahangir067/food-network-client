@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/recipies/${params.id}`)
             },
             {
-                path: '/blo',
+                path: '/blog',
                 element: <Blog></Blog>
             },
             {

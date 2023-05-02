@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../public/cooking.png'
-import Banner from '../../Banner/Banner';
 
 const Navbar = () => {
+    
     return (
         <div>
             <div className="navbar bg-slate-900 text-white px-10">
@@ -18,7 +18,6 @@ const Navbar = () => {
                         <Link className='px-2 font-semibold' to="/blog">Blog</Link>
                         <Link className='px-2 font-semibold' to="/service">Service</Link>
                     </div>
-
                     <div className="w-10 rounded-full mr-3">
                         <img src={logo} />
                     </div>

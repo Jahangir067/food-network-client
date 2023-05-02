@@ -11,7 +11,7 @@ const ErrorPage = () => {
 
 
     return (
-       <div className='text-center w-full h-full mt-40'>
+       <div className='text-center w-full h-full mt-28'>
             <div className='font-bold text-8xl text-gray-500'>
                 <img className='w-56 mx-auto' src={error} alt="" />
                 <h2 className='mt-5'>404</h2>

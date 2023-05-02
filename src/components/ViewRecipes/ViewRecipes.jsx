@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEye, FaRegStar, FaStar } from 'react-icons/fa';
+import { FaEye, FaRegStar, FaStar, FaVoteYea } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -30,7 +30,7 @@ const ViewRecipes = () => {
     }
 
     return (
-        <div className='mx-20 border-2 my-6 p-4 py-8 flex items-center gap-8 shadow-lg rounded-xl'>
+        <div className='mx-10 border-2 my-6 p-4 py-8 flex items-center gap-5 shadow-lg rounded-xl'>
             <img className='h-[320px] rounded-lg' src={img} alt="" />
             <ToastContainer></ToastContainer>
             <div>
@@ -38,7 +38,9 @@ const ViewRecipes = () => {
 
                 <p className='font-semibold font-xl my-2'>Experience: <span className='text-green-600'>{experience_time}</span></p>
                 <p className='font-semibold font-xl'>Recipes Number: <span className='text-green-500'>{recipes_numbers}</span></p>
-                <p className='mt-3 font-semibold'>Rating: <Rating
+                <p className='mt-2 font-semibold'>Likes: <span className='text-green-500'>{likes}</span></p>
+
+                <p className='mt-2 font-semibold'>Rating: <Rating
                     placeholderRating={rating}
                     readonly
                     emptySymbol={<FaRegStar className='mt-1'></FaRegStar>}
@@ -46,7 +48,7 @@ const ViewRecipes = () => {
                     fullSymbol={<FaStar></FaStar>}
                 />
                 </p>
-                <p className='font-semibold mt-3'>{description}</p>
+                <p className='font-semibold mt-2'>{description}</p>
                 <div className='flex mt-5'>
                     <div className='border-2 p-3 w-48'>
                         <img src={thumble1} alt="" />
