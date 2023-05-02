@@ -6,11 +6,13 @@ import Blog from "../components/Blog/Blog";
 import ViewRecipes from "../components/ViewRecipes/ViewRecipes";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Home></Home>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/recipies/${params.id}`)
             },
             {
-                path: '/blog',
+                path: '/blo',
                 element: <Blog></Blog>
             },
             {
