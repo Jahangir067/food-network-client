@@ -15,17 +15,25 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, photo, email, password)
+
+        if(password.length < 6){
+            setError('Please add at least 6 character')
+        }
+
         setSuccess('')
 
         creatUser(email, password, name, photo)
         .then(result => {
             const createUser = result.user;
             console.log(createUser);
+            setError('')
+            event.target.reset();
             setSuccess('Success Create Account');
+            
         })
         .catch(error =>{
             console.log(error.message);
-            setError('Opps! Please Try Again Later')
+            setError(error.message)
         })
     }
 
@@ -37,16 +45,16 @@ const Register = () => {
                     <p className='text-2xl font-semibold text-center text-green-400'>{success}</p>
                     <p className='text-2xl text-center font-semibold text-red-600'>{error}</p>
                 <label className="font-semibold"><h6>Your Name</h6></label>
-                <input type="text" placeholder="Your Name" name='name' id='name' className="input input-bordered input-primary w-full max-w-xs mb-2" />
+                <input type="text" required placeholder="Your Name" name='name' id='name' className="input input-bordered input-primary w-full max-w-xs mb-2" />
 
                 <label className="font-semibold"><h6>Your Photo URL</h6></label>
-                <input type="text" placeholder="Photo URL" name='photo' id='photo' className="input input-bordered input-primary w-full max-w-xs mb-2" />
+                <input type="text" required placeholder="Photo URL" name='photo' id='photo' className="input input-bordered input-primary w-full max-w-xs mb-2" />
 
                 <label className="font-semibold"><h6>Your Email</h6></label>
-                <input type="email" placeholder="Your Email" name='email' id='email' className="input input-bordered input-primary w-full max-w-xs mb-2" />
+                <input type="email" required placeholder="Your Email" name='email' id='email' className="input input-bordered input-primary w-full max-w-xs mb-2" />
 
                 <label className="font-semibold"><h6>Your Password</h6></label>
-                <input type="password" name='password' id='password' placeholder="Your Password" className="input input-bordered input-primary w-full max-w-xs mb-2" /> <br />
+                <input type="password" required name='password' id='password' placeholder="Your Password" className="input input-bordered input-primary w-full max-w-xs mb-2" /> <br />
                 
                 <input type="submit" value="Register" className='btn btn-primary w-full max-w-xs' />
 
