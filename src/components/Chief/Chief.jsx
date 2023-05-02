@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Place from '../Place/Place';
 
 const Chief = ({ chef }) => {
     const { name, likes, img, recipes_numbers, experience_time } = chef;
@@ -23,8 +24,6 @@ const Chief = ({ chef }) => {
                             </Link>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
