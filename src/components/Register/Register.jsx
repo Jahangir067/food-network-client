@@ -5,7 +5,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Register = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
-    const {creatUser} = useContext(AuthContext)
+    const {creatUser, updateProfileNamePhoto} = useContext(AuthContext)
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -19,13 +19,13 @@ const Register = () => {
         if(password.length < 6){
             setError('Please add at least 6 character')
         }
-
         setSuccess('')
 
         creatUser(email, password, name, photo)
         .then(result => {
             const createUser = result.user;
             console.log(createUser);
+            updateUserInfo(result.user, name, photo)
             setError('')
             event.target.reset();
             setSuccess('Success Create Account');
@@ -33,6 +33,16 @@ const Register = () => {
         })
         .catch(error =>{
             console.log(error.message);
+            setError(error.message)
+        })
+    }
+
+    const updateUserInfo = (user, name, photo) =>{
+        updateProfileNamePhoto(user, name, photo)
+        .then(() =>{
+            console.log('User name update')
+        })
+        .catch(error =>{
             setError(error.message)
         })
     }

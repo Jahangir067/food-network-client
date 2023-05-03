@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../public/cooking.png'
 import { AuthContext } from '../../Provider/AuthProvider';
-import userImg from '../../../../public/person6.png'
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -31,8 +32,13 @@ const Navbar = () => {
                     </div>
 
                     {
-                        user && <div className="w-10 rounded-full mr-3">
-                            <img title="Buffly Amrin" src={userImg} />
+                        user && <div 
+                        data-tooltip-id="my-tooltip" 
+                        data-tooltip-content="Hello world!" 
+                        data-tooltip-place="top"
+
+                        className="w-10 rounded-full mr-3">
+                            <img  className={`w-14 hover:${<Tooltip id="my-tooltip"></Tooltip>}`} src={user.photoURL} />
                         </div>
                     }
 

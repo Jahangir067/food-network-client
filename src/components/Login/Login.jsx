@@ -7,7 +7,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInGoogle } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -36,6 +36,20 @@ const Login = () => {
             })
     }
 
+    const googleSign = () =>{
+        signInGoogle()
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            setError('')
+            setSuccess('Success Login Account')
+            navigate(from)
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
+    }
+
     return (
         <div>
             <form onSubmit={handleSign} className="w-96 mx-auto border-2 mt-10 p-5 rounded-lg">
@@ -51,7 +65,7 @@ const Login = () => {
                 <label className="font-semibold"><h6>Your Password</h6></label>
                 <input type="password" name='password' id='password' required placeholder="Your Password" className="input input-bordered input-primary w-full max-w-xs mb-3" />
 
-                <button className="btn flex w-full max-w-xs mb-2">
+                <button onClick={googleSign} className="btn flex w-full max-w-xs mb-2">
                     <FaGoogle></FaGoogle>
                     <p className='ml-3'>Sign In Google</p>
 
