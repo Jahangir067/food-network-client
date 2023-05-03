@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../public/cooking.png'
 import { AuthContext } from '../../Provider/AuthProvider';
 import 'react-tooltip/dist/react-tooltip.css'
@@ -26,9 +26,9 @@ const Navbar = () => {
 
                 <div className="flex-none gap-2">
                     <div className='mr-96'>
-                        <Link className='px-2 font-semibold' to="/">Home</Link>
-                        <Link className='px-2 font-semibold' to="/blog">Blog</Link>
-                        <Link className='px-2 font-semibold' to="/service">Service</Link>
+                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600 px-2 font-semibold' : 'px-2 font-semibold')} to="/">Home</NavLink>
+                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600 px-2 font-semibold' : 'px-2 font-semibold')} to="/blog">Blog</NavLink>
+                        <NavLink className={({isActive}) => (isActive ? 'text-blue-600 px-2 font-semibold' : 'px-2 font-semibold')} to="/service">Service</NavLink>
                     </div>
 
                     {
@@ -38,7 +38,7 @@ const Navbar = () => {
                         data-tooltip-place="top"
 
                         className="w-10 rounded-full mr-3">
-                            <img  className={`w-14 hover:${<Tooltip id="my-tooltip"></Tooltip>}`} src={user.photoURL} />
+                            <img  className="w-12 rounded-full" src={user.photoURL} />
                         </div>
                     }
 
