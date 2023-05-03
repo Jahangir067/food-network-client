@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEye } from 'react-icons/fa';
+import { FaEye, FaRegThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Place from '../Place/Place';
 
@@ -16,7 +16,7 @@ const Chief = ({ chef }) => {
                     <h3 className='font-semibold card-normal'>Number Of Recipes: <span className='text-red-500'>{recipes_numbers}</span></h3>
 
                     <div className='flex items-center'>
-                        <FaEye className='text-2xl text-lime-500	'></FaEye>
+                        <FaRegThumbsUp className='text-2xl font-semibold text-green-600'></FaRegThumbsUp>
                         <p className='ml-3 font-bold text-green-600	'>{likes}</p>
                         <div className="justify-end">
                             <Link to={`/details/${id}`}>

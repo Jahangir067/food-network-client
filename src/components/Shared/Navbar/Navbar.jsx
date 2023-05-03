@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../public/cooking.png'
 import { AuthContext } from '../../Provider/AuthProvider';
-import 'react-tooltip/dist/react-tooltip.css'
-import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -38,7 +36,7 @@ const Navbar = () => {
                         data-tooltip-place="top"
 
                         className="w-10 rounded-full mr-3">
-                            <img  className="w-12 rounded-full" src={user.photoURL} />
+                            <img title={ user && user.displayName} className="w-12 rounded-full" src={user.photoURL} />
                         </div>
                     }
 
