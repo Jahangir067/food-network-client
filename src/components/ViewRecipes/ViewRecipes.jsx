@@ -52,7 +52,7 @@ const ViewRecipes = () => {
             <div className='flex mt-10 ml-4'>
                 <div className='border-2 p-3 w-96 rounded'>
                     <img className='h-60'  src={thumble1} alt="" />
-                    <h2 className='font-bold text-red-500'>{title1}</h2>
+                    <h2 className='font-bold text-red-500 mt-2'>{title1}</h2>
 
                     <p className='mt-2 font-semibold'>Rating: <Rating
                         placeholderRating={rating1}
@@ -71,9 +71,10 @@ const ViewRecipes = () => {
                         <button onClick={toastify1} disabled={!favourite} className="btn btn-sm ">Favorite</button>
                     </div>
                 </div>
+                
                 <div className='border-2 p-3 w-96 mx-4 rounded'>
                     <img className='h-60'  src={thumble2} alt="" />
-                    <h2 className='font-bold text-red-500'>{title2}</h2>
+                    <h2 className='font-bold text-red-500 mt-2'>{title2}</h2>
 
                     <p className='mt-2 font-semibold'>Rating: <Rating
                         placeholderRating={rating2}
@@ -90,9 +91,10 @@ const ViewRecipes = () => {
                         <button onClick={toastify2} disabled={!favsecond} className="btn btn-sm ">Favorite</button>
                     </div>
                 </div>
+
                 <div className='border-2 p-3 w-96 rounded'>
                     <img className='h-60' src={thumble3} alt="" />
-                    <h2 className='font-bold text-red-500'>{title3}</h2>
+                    <h2 className='font-bold text-red-500 mt-2'>{title3}</h2>
 
                     <p className='mt-2 font-semibold'>Rating: <Rating
                         placeholderRating={rating3}
