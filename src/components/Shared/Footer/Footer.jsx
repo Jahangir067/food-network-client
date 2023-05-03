@@ -6,12 +6,11 @@ const Footer = () => {
         <div className='bg-slate-900 text-white mt-20 text-center py-5'>
             <h2 className='font-bold text-5xl text-center pt-5'>GOOD FOOD</h2>
             <ul className='flex justify-center mt-5'>
-                <li className='px-2 font-bold'>HOME</li>
-                <li className='px-2 font-bold'>RECIPES</li>
-                <li className='px-2 font-bold'>ABOUT US</li>
-                <li className='px-2 font-bold'>EVENT</li>
-                <li className='px-2 font-bold'>BLOG</li>
-                <li className='px-2 font-bold'>CONTACT</li>
+                <li className='md:px-2 px-1 md:font-bold'>HOME</li>
+                <li className='md:px-2 px-1 md:font-bold'>RECIPES</li>
+                <li className='md:px-2 px-1 md:font-bold'>ABOUT US</li>
+                <li className='md:px-2 px-1 md:font-bold'>EVENT</li>
+                <li className='md:px-2 px-1 md:font-bold'>CONTACT</li>
             </ul>
 
             <ul className='flex justify-center mt-5'>

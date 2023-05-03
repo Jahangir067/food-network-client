@@ -5,9 +5,10 @@ const Banner = () => {
     return (
         <div>
             <img className='w-full relative' src={banner} alt="" />
-            <div className='absolute top-52 ml-[500px] text-center'>
-                <h2 className='bg-slate-300 py-4 px-8 text-red-700 text-4xl font-bold rounded-lg'>The Food Network</h2>
-                <button className="btn bg-purple-700 mt-4 font-bold">Explore Recipes</button>
+            <div className='absolute hidden md:block top-24 ml-[60px] md:top-52 md:ml-[500px] text-center'>
+                <h2 className='bg-slate-300 py-1 px-2 md:py-4 md:px-8 text-red-700 md:text-4xl md:font-bold rounded-lg'>The Food Network</h2>
+                
+                <button className='bg-purple-600 py-1 mt-2 px-2 md:py-4 text-white md:text-2xl md:px-8 rounded-lg'>Explore Recipes</button>
             </div>
         </div>
     );

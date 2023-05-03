@@ -19,12 +19,12 @@ const Recipies = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='w-[700px] mx-auto text-center'>
-                <h2 className='text-3xl font-bold mt-10 text-orange-600 text-center'>Recipes</h2>
-                <h4 className='text-5xl font-bold mt-3'>What They Say</h4>
+            <div className='md:w-[700px] mx-auto text-center px-4'>
+                <h2 className='md:text-3xl font-bold md:mt-10 mt-3 text-orange-600 text-center'>Recipes</h2>
+                <h4 className='md:text-5xl font-bold mt-3'>What They Say</h4>
                 <p className='mt-3 font-semibold'>One important aspect of recipes is accurate measuring of ingredients. This ensures that the dish turns out as intended and is delicious to eat. Common measurements include cups, teaspoons, tablespoons, and ounces.</p>
             </div>
-            <div className='grid grid-cols-3 gap-5 px-10 mt-10'>
+            <div className='grid md:grid-cols-3 md:gap-5 md:px-10 px-4 mt-10'>
                 {
                     recipes.map(chef => <Chief
                         key={chef.id}
