@@ -42,7 +42,7 @@ const Navbar = () => {
                     <div className='my-2 md:my-0'>
                         <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 px-2 font-semibold block lg:inline' : 'px-2 font-semibold block lg:inline')} to="/">Home</NavLink>
                         <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 px-2 font-semibold block lg:inline' : 'px-2 font-semibold block lg:inline')} to="/blog">Blog</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 px-2 font-semibold block lg:inline' : 'px-2 font-semibold block lg:inline')} to="/service">Service</NavLink>
+                       
                     </div>
                 </div>
 
