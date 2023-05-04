@@ -8,7 +8,7 @@ const Recipies = () => {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/recipies')
+        fetch('https://the-food-network-server-noornabi07.vercel.app/recipies')
             .then(res => res.json())
             .then(data => setRecipes(data))
             .catch(error => {

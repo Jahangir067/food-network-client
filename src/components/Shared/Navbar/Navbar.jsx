@@ -23,20 +23,16 @@ const Navbar = () => {
                     <img className='w-12 rounded-full' src={logo} alt="" />
                     <a className=" md:font-bold text-2xl mx-2">The Food Network</a>
 
-
+                     {/* heroicon toggle start*/}
                     <div onClick={() => setOpen(!open)} className='md:hidden mt-1'>
                         <p>
                             {open === true ? <XMarkIcon className="h-6 w-6 text-white" />
                                 : <Bars3Icon className="h-6 w-6 text-white" />}
                         </p>
                     </div>
+                    {/* heroicon toggle end */}
 
                 </div>
-
-                {/* heroicon toggle start*/}
-
-
-                {/* heroicon toggle end */}
 
                 <div className={`md:block ${open ? 'block' : 'hidden'}`}>
                     <div className='my-2 md:my-0'>

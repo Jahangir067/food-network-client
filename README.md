@@ -1,5 +1,5 @@
 * My Project name is The Food Network
-* Live Project Link: 
+* Live Project Link: https://the-food-network-client.web.app/
 * I created the route by creating api data in the json file on the server site.
 * The data is loaded on the client site and displayed in the home page.
 * Home page navbar, 6 chiefs are shown in card form with their details, 2 extra sections are created.

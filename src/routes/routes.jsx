@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: 'details/:id',
                 element: <PrivetRoutes><ViewRecipes></ViewRecipes></PrivetRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/recipies/${params.id}`)
+                loader: ({params}) => fetch(`https://the-food-network-server-noornabi07.vercel.app/recipies/${params.id}`)
             },
             {
                 path: '/blog',
