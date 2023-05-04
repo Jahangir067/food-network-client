@@ -7,7 +7,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     
-    const { signIn, signInGoogle } = useContext(AuthContext);
+    const { signIn, signInGoogle, signInGithub } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -50,6 +50,20 @@ const Login = () => {
         })
     }
 
+    const handleLoginGithub = () =>{
+        signInGithub()
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            setError('')
+            setSuccess('Success Login Account')
+            navigate(from)
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
+    }
+
     return (
         <div>
             <form onSubmit={handleSign} className="w-96 mx-auto border-2 mt-10 p-5 rounded-lg">
@@ -71,7 +85,7 @@ const Login = () => {
 
                 </button>
 
-                <button className="btn flex w-full max-w-xs mb-2">
+                <button onClick={handleLoginGithub} className="btn flex w-full max-w-xs mb-2">
                     <FaGithub></FaGithub>
                     <p className='ml-3'>Sign In Github</p>
 
