@@ -1,8 +1,14 @@
 import React from 'react';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
     return (
-        <div className='md:mx-20 bg-gray-300 mt-6 p-6 rounded-lg mx-4'>
+        <div className='Blog'>
+       <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button className='bg-success' onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+        <div ref={ref} className='md:mx-20  bg-gray-300 mt-6 p-6 rounded-lg mx-4'>
             <h2 className='font-bold md:text-2xl mb-2 text-pink-600'>1. Tell us the differences between uncontrolled and controlled components.</h2>
             <p className='font-semibold mb-6'><span className='text-purple-500 font-bold'>Answer:</span> In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally.</p>
 
@@ -19,6 +25,7 @@ const Blog = () => {
             <p className='font-semibold mb-6'><span className='text-purple-500 font-bold'>Answer:</span> A custom hook is a function in React that allows you to reuse stateful logic across multiple components. Custom hooks are a way to extract and share functionality that is common across different components, making it easier to write reusable and maintainable code. <br />
             You might create a custom hook to encapsulate logic that is shared across multiple components, such as fetching data from an API or managing a form's state..
             </p>
+        </div>
         </div>
     );
 };
