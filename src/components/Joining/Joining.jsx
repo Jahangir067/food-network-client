@@ -1,6 +1,7 @@
 import React from 'react';
 import rightimg from '../../../public/bottoom-side-img.png'
 import { Link } from 'react-router-dom';
+// Joining Section
 const Joining = () => {
     return (
         <div className='grid md:grid-cols-2 md:gap-5 border py-4 shadow-2xl md:pb-14 mx-4 mt-5 pt-3 pt-0 md:mx-10 rounded-xl'>

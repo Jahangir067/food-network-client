@@ -2,6 +2,7 @@ import React from 'react';
 import { FaEye, FaRegThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+// Chef section
 
 const Chief = ({ chef }) => {
     const { name, likes, img, recipes_numbers, experience_time, id } = chef;

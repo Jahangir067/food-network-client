@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../public/cooking.png'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+// Navbar Section
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)

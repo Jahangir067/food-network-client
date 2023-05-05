@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Chief from '../Chief/Chief';
 import Place from '../Place/Place';
 import Joining from '../Joining/Joining';
+// Recipe section
 
 const Recipies = () => {
     const [recipes, setRecipes] = useState([]);

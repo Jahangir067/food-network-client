@@ -1,5 +1,6 @@
 import React from 'react';
 import sideimg from '../../../public/side-img.jpg'
+// Place Section
 
 const Place = () => {
     return (

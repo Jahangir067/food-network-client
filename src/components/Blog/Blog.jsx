@@ -1,6 +1,7 @@
 import React from 'react';
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
+// Blog Section
 
 const Blog = () => {
     return (
