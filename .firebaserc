@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "the-food-network-client"
-  }
+    "default": "the-food-network-e80fa",
+    "build": "the-food-network-e80fa"
+  },
+  "targets": {},
+  "etags": {}
 }
