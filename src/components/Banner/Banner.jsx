@@ -1,7 +1,7 @@
 import React from 'react';
 import banner from '../../../public/banner4.jpg'
 
-// banner section
+// banner section 
 
 const Banner = () => {
     return (
