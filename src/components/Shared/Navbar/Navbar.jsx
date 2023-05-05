@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="md:flex items-center py-2 justify-between bg-slate-900 text-white md:px-10 px-4">
                 <div className='flex items-center justify-between'>
                     <img className='w-12 rounded-full' src={logo} alt="" />
-                    <a className=" md:font-bold text-2xl mx-2">The Food Network</a>
+                    <a className=" md:font-bold text-2xl mx-2">The Food Bank Network</a>
 
                      {/* heroicon toggle start*/}
                     <div onClick={() => setOpen(!open)} className='md:hidden mt-1'>
